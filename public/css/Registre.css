@@ -1,29 +1,65 @@
 /* Body Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9c5;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
 /* Container Styling */
 .container {
     background-color: #ffffe0;
-    width: 600px;
-    padding: 20px;
     border-radius: 10px;
+    padding: 20px;
+    margin: auto;
+    max-width: 1200px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
+}
+
+/* Header Image */
+.image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header-image {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+
 }
 
 /* Title Styling */
 .container h1 {
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 30px;
+    color: #1b1ede;
+    font-weight: bold;
+}
+
+/* Form Row Styling (One Row for Position and Username) */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-row .form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-row .form-group select,
+.form-row .form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
 /* Form Group Styling */
@@ -33,9 +69,9 @@ body {
 }
 
 .form-group label {
+    font-weight: bold;
     display: block;
     margin-bottom: 5px;
-    font-weight: bold;
 }
 
 .form-group input,
@@ -51,28 +87,68 @@ body {
 .radio-group {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.radio-group input[type="radio"] {
+    width: 20px;
+    height: 20px;
 }
 
 /* Button Styling */
 .form-actions {
     margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.form-actions button {
-    padding: 10px 20px;
+.form-actions button,
+.form-actions .ms-4 {
+    flex: 1;
+    padding: 15px 5px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
+    text-align: center;
     cursor: pointer;
 }
 
-.form-actions .create {
+.form-actions .ms-4 {
     background-color: #4caf50;
     color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.form-actions .ms-4:hover {
+    background-color: #45a049;
 }
 
 .form-actions .reset {
     background-color: #f44336;
     color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.form-actions .reset:hover {
+    background-color: #e41f1f;
+}
+
+
+.header-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the image horizontally and vertically */
+    background-color: #f7fbcf; /* Match the card background to cover overlaps */
+    padding: 5px; /* Add padding if needed for better visibility */
+    z-index: 10; /* Ensure the image appears above the card border */
 }

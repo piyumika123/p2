@@ -16,7 +16,7 @@
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
+            @include('M-layout.navigation')
 
             <!-- Page Heading -->
             @isset($header)
@@ -29,12 +29,12 @@
 
             <!-- Page Content -->
             <div class="container-fluid page-body-wrapper">
-                @include('layouts.sidebar')
+                @include('M-layout.sidebar')
                 <div class="main-panel">
                     <div class="content-wrapper">
                         @yield('content')
                     </div>
-                    @include('layouts.footer')
+                    @include('M-layout.footer')
                 </div>
             </div>
         </div>

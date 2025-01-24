@@ -24,6 +24,10 @@ Route::get('/supermarket/dashboard', function () {
     return view('dashboards.supermarket');
 })->middleware(['auth', 'verified'])->name('supermarket.dashboard');
 
+Route::get('/employee/create', function () {
+    return view('auth.register');
+})->middleware(['auth', 'verified'])->name('employee.create');
+
 Route::get('/register', [RegisteredUserController::class, 'create'])
     ->name('register');
 
