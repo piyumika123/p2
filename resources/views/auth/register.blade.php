@@ -15,7 +15,7 @@
             <br>
             <br>
 
-            <h1>Register the New Employee</h1>
+            <h1>Create the New Employee</h1>
             <form method="POST" action="{{ route('register') }}">
                 @csrf
 
