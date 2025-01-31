@@ -48,8 +48,8 @@
                 </a>
                 <div class="collapse" id="goodsInward">
                     <ul class="nav flex-column sub-menu">
-                        <li class="nav-item"><a class="nav-link" href="#">Supplier Registration</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Item Registration</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('supplier.registration') }}">Supplier Registration</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('item.registration') }}">Item Registration</a></li>
                     </ul>
                 </div>
             </li>

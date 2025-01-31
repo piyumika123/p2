@@ -65,7 +65,6 @@
                 </div>
                 </div>
 
-               
                 <!-- Gender -->
                 <div class="form-group">
                     <label>Gender</label>
@@ -88,6 +87,9 @@
                     <input type="password" id="password_confirmation" name="password_confirmation" required>
                 </div>
                 </div>
+
+                <!-- Hidden Position ID -->
+                <input type="hidden" id="position_id" name="position_id">
 
                 <div class="form-actions">
                     <x-primary-button class="ms-4">

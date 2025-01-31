@@ -2,75 +2,78 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/typicons.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/vendor.bundle.base.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
+    <style>
+        .sidebar {
+            width: 250px;
+            transition: margin-left 0.3s;
+        }
+        .sidebar.d-none {
+            margin-left: -250px;
+        }
+        .content {
+            transition: margin-left 0.3s;
+            margin-left: 250px;
+        }
+        .content.shifted {
+            margin-left: 0;
+        }
+        .nav-item {
+            margin-bottom: 10px;
+        }
+        .nav-link {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    
-    
-    <div class="sidebar" id="sidebar">
-        <button class="btn btn-primary" id="toggleSidebarBtn">slidebar close</button>
-
-        <ul class="nav">
-            
+<div class="sidebar fixed-top" id="sidebar">
+        <div class="sidebar-logo">
+            <img src="{{ asset('images/s-logo.png') }}" alt="Logo" class="img-fluid">
+        </div>
+        <ul class="nav mt-3">
             <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="collapse" href="#goodsBilling" aria-expanded="false" aria-controls="goodsBilling">
-                    <i class="icon typcn typcn-document-text"></i>
+                <a class="nav-link" href="{{ route('goods.billing') }}">
+                    <i class="bi bi-person-plus"></i>
                     <span class="menu-title">Goods Billing</span>
-                    <i class="menu-arrow"></i>
                 </a>
-                <div class="collapse" id="goodsBilling">
-                    <ul class="nav flex-column sub-menu">
-                        <li class="nav-item"><a class="nav-link" href="#">Option 1</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Option 2</a></li>
-                    </ul>
-                </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="collapse" href="#goodsInward" aria-expanded="false" aria-controls="goodsInward">
-                    <i class="icon typcn typcn-film"></i>
+                <a href="{{ route('addstock') }}" class="nav-link">
+                    <i class="bi bi-box-arrow-in-down"></i>
                     <span class="menu-title">Goods Inward</span>
-                    <i class="menu-arrow"></i>
                 </a>
-                <div class="collapse" id="goodsInward">
-                    <ul class="nav flex-column sub-menu">
-                        <li class="nav-item"><a class="nav-link" href="#">Option 1</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Option 2</a></li>
-                    </ul>
-                </div>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
-                    <i class="icon typcn typcn-mortar-board"></i>
+                <a href="{{ route('goods.order') }}" class="nav-link">
+                    <i class="bi bi-cart"></i>
                     <span class="menu-title">Goods Order</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="collapse" href="#goodsReturn" aria-expanded="false" aria-controls="goodsReturn">
-                    <i class="icon typcn typcn-chart-pie"></i>
+                <a href="{{ route('goods.return') }}" class="nav-link">
+                    <i class="bi bi-arrow-return-left"></i>
                     <span class="menu-title">Goods Return</span>
-                    <i class="menu-arrow"></i>
                 </a>
-                <div class="collapse" id="goodsReturn">
-                    <ul class="nav flex-column sub-menu">
-                        <li class="nav-item"><a class="nav-link" href="#">Option 1</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Option 2</a></li>
-                    </ul>
-                </div>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
-                    <i class="icon typcn typcn-folder"></i>
+                <a href="{{ route('live.stock') }}" class="nav-link">
+                    <i class="bi bi-box-seam"></i>
                     <span class="menu-title">Live Stock</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
-                    <i class="icon typcn typcn-folder"></i>
+                <a href="{{ route('wastage.stock') }}" class="nav-link">
+                    <i class="bi bi-trash"></i>
                     <span class="menu-title">Wastage Stock</span>
                 </a>
             </li>
         </ul>
+    
+    </div>
+    <div class="content" id="content">
+        <!-- Dashboard content goes here -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
@@ -81,6 +84,7 @@
             const navLinks = document.querySelectorAll('.nav-link[data-bs-toggle="collapse"]');
             const toggleSidebarBtn = document.getElementById('toggleSidebarBtn');
             const sidebar = document.getElementById('sidebar');
+            const content = document.getElementById('content');
 
             navLinks.forEach(link => {
                 link.addEventListener("click", function () {
@@ -107,6 +111,7 @@
 
             toggleSidebarBtn.addEventListener('click', () => {
                 sidebar.classList.toggle('d-none');
+                content.classList.toggle('shifted');
             });
         });
     </script>

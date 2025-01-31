@@ -1,31 +1,22 @@
 @extends('layouts.app')
-
-@section('content')
-<div class="container-scroller">
-    <div class="container-fluid page-body-wrapper">
-        <!-- partial:partials/_sidebar.html -->
-        
-        <!-- partial -->
-        <div class="main-panel">
-            <div class="content-wrapper">
-
-
-                <!-- Add your content here -->
-                <h1>Supermarket Dashboard</h1>
-                <p>Welcome to the Supermarket Dashboard.</p>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Include Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+       
+                <!-- Dashboard content goes here -->
+                <div class="content" id="content">
 
             </div>
-
-
-            <!-- content-wrapper ends -->
-            <!-- partial:partials/_footer.html -->
-            
-            <!-- partial -->
-        </div>
-        <!-- main-panel ends -->
-    </div>
-    <!-- page-body-wrapper ends -->
-</div>
-@endsection
-
+        
+     
+    <!-- Include Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
