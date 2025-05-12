@@ -9,13 +9,12 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <nav x-data="{ open: false }" class="navbar navbar-expand-lg navbar-light bg-light" style="margin-left: 168px; width: 1180px;">
 
-        <div class="flex justify-between h-16">
             
 
-            <div class="flex items-right ms-auto">
+            <div class="flex items-center ms-auto">
                 <!-- Full Screen Toggle Button -->
                 <div class="me-4">
-                    <button id="fullscreen-toggle" class="inline-flex items-right px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
+                    <button id="fullscreen-toggle" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
                         <svg id="fullscreen-icon" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h6v2H6v4H4V4zm10 0h6v6h-2V6h-4V4zm6 10v6h-6v-2h4v-4h2zm-10 6H4v-6h2v4h4v2z" />
                         </svg>
@@ -23,13 +22,13 @@
                 </div>
 
                 <!-- Settings Dropdown -->
-                <div class="hidden sm:flex sm:items-right sm:ms-6">
-                    <x-dropdown align="right" width="108">
+                <div class="hidden sm:flex sm:items-center sm:ms-6">
+                    <x-dropdown width="108">
                         <x-slot name="trigger">
                             <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
                                 <div class="ms-1">
                                     <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 0 01-1.414 0l-4-4a1 0 010-1.414z" clip-rule="evenodd" />
                                     </svg>
                                 </div>
                             </button>
@@ -66,7 +65,6 @@
                     </svg>
                 </button>
             </div>
-        </div>
     </div>
 
     <script>

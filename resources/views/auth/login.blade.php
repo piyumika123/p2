@@ -24,7 +24,7 @@
                     @csrf
                     <div class="input-group">
                         <div class="input-icon">
-                            <img src="{{ asset('images/user-icon.png') }}" alt="User Icon">
+                            <img src="{{ asset('images/username1.png') }}" alt="User Icon">
                         </div>
                         <input type="email" name="email" placeholder="Enter your email" required autofocus>
                     </div>
@@ -34,7 +34,7 @@
 
                     <div class="input-group">
                         <div class="input-icon">
-                            <img src="{{ asset('images/password-icon.png') }}" alt="Password Icon">
+                            <img src="{{ asset('images/password.png') }}" alt="Password Icon">
                         </div>
                         <input type="password" name="password" placeholder="Enter your password" required>
                     </div>

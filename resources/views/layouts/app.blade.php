@@ -16,6 +16,7 @@
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
+            <!-- Include Navigation Bar -->
             @include('layouts.navigation')
 
             <!-- Page Heading -->
@@ -34,6 +35,10 @@
                     <div class="content-wrapper">
                         @yield('content')
                     </div>
+                    <div class="layout-chart">
+                        @include('layouts.content')
+                    </div>
+
                     @include('layouts.footer')
                 </div>
             </div>

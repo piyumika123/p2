@@ -48,25 +48,41 @@
                 </a>
                 <div class="collapse" id="goodsInward">
                     <ul class="nav flex-column sub-menu">
-                        <li class="nav-item"><a class="nav-link" href="#">Supplier Registration</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Item Registration</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('supplier.registration') }}">Supplier Registration</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('item.registration') }}">Item Registration</a></li>
                     </ul>
                 </div>
             </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">
-                    <i class="bi bi-cart"></i>
-                    <span class="menu-title">Goods Order</span>
-                </a>
-            </li>
+            
             <li class="nav-item">
                 <a class="nav-link" data-bs-toggle="collapse" href="#goodsReturn" aria-expanded="false" aria-controls="goodsReturn">
                     <i class="bi bi-arrow-return-left"></i>
-                    <span class="menu-title">Goods Return</span>
+                    <span class="menu-title">Supermarkert</span>
                     <i class="menu-arrow"></i>
                 </a>
                 <div class="collapse" id="goodsReturn">
                     <ul class="nav flex-column sub-menu">
+                        <li class="nav-item"><a class="nav-link" href="#">Option 1</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Option 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Option 1</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Option 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Option 1</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Option 2</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="collapse" href="#goodsReturn" aria-expanded="false" aria-controls="goodsReturn">
+                    <i class="bi bi-arrow-return-left"></i>
+                    <span class="menu-title">Warehouse</span>
+                    <i class="menu-arrow"></i>
+                </a>
+                <div class="collapse" id="goodsReturn">
+                    <ul class="nav flex-column sub-menu">
+                        <li class="nav-item"><a class="nav-link" href="#">Option 1</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Option 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Option 1</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Option 2</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Option 1</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Option 2</a></li>
                     </ul>
@@ -74,14 +90,8 @@
             </li>
             <li class="nav-item">
                 <a href="#" class="nav-link">
-                    <i class="bi bi-box-seam"></i>
-                    <span class="menu-title">Live Stock</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">
                     <i class="bi bi-trash"></i>
-                    <span class="menu-title">Wastage Stock</span>
+                    <span class="menu-title">Setting</span>
                 </a>
             </li>
         </ul>
